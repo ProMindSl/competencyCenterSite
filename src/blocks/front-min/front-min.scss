@@ -1,0 +1,60 @@
+.front-min 
+{
+  font-family: $font-family-sans-serif;
+  color: $black;
+
+
+  .container 
+  {
+    /*display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;*/
+    /*display: flex;*/
+    /*flex-direction: column;
+    justify-content: center;
+    align-content: center;*/
+    display: table;
+    min-height: 230px;
+    max-width: 1366px;
+    background: #ffffff url("../img/front_min__bg.png") no-repeat;
+    /*background-position-y: -70px;*/
+
+    .row
+    {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+
+
+
+  &__text-center
+  { 
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 70px;
+    text-align: center;
+
+    position: relative;
+    top: 10px;
+
+    @include media-breakpoint-down(sm) 
+    {
+      font-size: 40px;
+    }
+  }
+ 
+ 
+
+  &__comment  
+  {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    max-width: 755px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}

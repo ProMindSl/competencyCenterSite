@@ -1,0 +1,19 @@
+# do not track IDE config files
+.idea/
+# exclude log files
+*.log
+
+.zip
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+
+build
+node_modules
+yarn.lock

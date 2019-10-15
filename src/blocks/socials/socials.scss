@@ -1,0 +1,43 @@
+.socials 
+{
+  display: inline-flex;
+
+  &__item 
+  {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-position: center; 
+    @include transitionM(background-color, 0.3s);
+
+    &--phone 
+    {
+    	background: $primary url("../img/pic_headphone.svg") no-repeat;
+    	background-position: center;
+    }
+    
+    &--up 
+    {
+    	background: $primary url("../img/pic_up.svg") no-repeat;
+    	background-position: center;
+    }
+
+    &:hover
+    {
+        cursor: pointer;
+    	background-color: $light_primary;
+        @include transitionM(background-color, 0.3s);
+    }
+  }
+
+  span.phoneVal
+  {
+    font-size: 20px;
+    color: $primary; 
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
+  }
+}

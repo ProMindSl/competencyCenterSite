@@ -1,0 +1,23 @@
+mixin content-table(col_names, rows, hrefs, modifier)
+  .content-table(class=modifier)
+    .container
+      .row
+        .col-lg-8.mx-auto
+          - var colsCount = col_names.length;
+          table.table
+            thead
+              tr
+                - for(let i=0; i<colsCount; i++) { /* учитываем кол-во элементов массива столбцов переданный в аргументе */
+                th(scope='col')=col_names[i] /* заполнение наименований столбцов таблицы*/
+                - }
+            tbody
+              - for(let i=0; i<rows.length; i++) {
+              tr(onclick=hrefs[i])
+                th(scope='row')=(i+1)
+                - for(let j=1; j<rows[i].length; j++) {
+                td=rows[i][j] /* заполнение строк таблицы из аргумента-массива*/
+                  - if (rows[i][j] == 'PDF') { /* добавляем картинку pdf в соответствующую ячейку */
+                  img(src="img/pdf.svg")
+                  - }
+                - }
+              - }
