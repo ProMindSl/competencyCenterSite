@@ -12,7 +12,7 @@
 
     &--phone 
     {
-    	background: $primary url("../img/pic_headphone.svg") no-repeat;
+    	background: $primary url("../img/pic_facebook.svg") no-repeat;
     	background-position: center;
     }
     
@@ -24,9 +24,9 @@
 
     &:hover
     {
-        cursor: pointer;
+      cursor: pointer;
     	background-color: $light_primary;
-        @include transitionM(background-color, 0.3s);
+      @include transitionM(background-color, 0.3s);
     }
   }
 

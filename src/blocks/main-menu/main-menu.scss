@@ -1,0 +1,194 @@
+.main-menu
+{
+  //box-shadow: 0 2px 10px rgba(85, 85, 85, 0.25);
+  background: rgba(242, 242, 242, 1);
+
+  &__content 
+  {
+
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 70px;
+    max-width: 1366px;
+    position: relative;
+    /* компенсация отступов сетки bootstrap  */
+	  /*margin-right: -15px;  
+	  margin-left: -15px;*/
+    
+    
+    /*background-color: #f2f2f2;
+    background: rgba(242, 242, 242, 0.8);*/
+
+    a.logo
+    {
+		  /*Стили в блоке logo*/
+      
+      /* отступы */
+      margin-right: 15px;  
+      margin-left: 15px;
+      /*@include media-breakpoint-down(lg) 
+      { 
+        margin-left: 0px;
+      }*/
+      @media all and (max-width: 1400px)
+      {
+        margin-left: 0px;
+      }
+      @media all and (max-width:650px)
+      {
+        flex-grow: 1;
+      }
+
+    }
+
+    
+    a.btn
+    {
+      width: 163px;
+      height: 50px;
+      @media all and (max-width:760px)
+      {
+        display: none;
+      }
+
+      margin-right: 15px;
+      
+      @media all and (max-width: 1400px)
+      {
+        margin-right: 0px;
+      }
+
+      &:hover
+      {
+        color: #ffffff;
+        background-color: $light_primary;
+      }
+    }
+
+    a.btn_home
+    {
+
+    	display: none;
+      /* меняем дизайн кнопки в шапке при заданной ширине */
+      @media all and (max-width:760px)
+      {
+        display: inline-block;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        background: $primary url(../img/key_btnpic.svg) no-repeat;
+        background-position: center; 
+      }
+
+    	color: #ffffff;
+      font-weight: 300;
+
+      margin-right: 15px;
+      
+      @media all and (max-width: 1400px)
+      {
+        margin-right: 0px;
+      }
+
+      &:hover
+      {
+        background-color: $light_primary;
+      }
+    }
+    
+    a.btn_menu
+    {
+
+      display: none;
+
+      @media all and (max-width:650px)
+      {
+        display: inline-block;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        background: $primary url(../img/menu_btnpic.svg) no-repeat;
+        background-position: center; 
+        margin-right: 10px;
+      }
+
+      &:hover
+      {
+        background-color: $light_primary;
+        cursor: pointer;
+      }
+     
+    }
+
+  }
+
+   &__menu
+   {
+      position: static;
+      flex-grow: 1;
+      /*display: inline-flex;*/
+      opacity: 1;
+
+      /* Перестройка меню сайта при маленьком разрешении */
+      @media all and (max-width: 650px)
+      {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 10px;
+        flex-direction: column;
+        background-color: #ffffff;
+        text-align: center;
+        z-index: 100;
+      }
+   }
+   
+   &__link
+   {
+      display: inline-flex;
+      align-items: center;
+      color: #1a1a1a;
+      font-family: $font-family-sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      height: 50px;
+      margin-left: 30px;
+
+      &:nth-child(1)
+      {
+        margin-left: 0px;
+      }
+
+      &:hover
+      {
+        color: $dark_primary;
+      }
+
+      @media all and (max-width: 650px)
+      {
+        width: 130px;
+        height: 55px;
+        margin-left: 0px;
+        padding-left: 20px;
+        border-top: #eff0f4 solid 1px;
+        /*align-self: center;*/
+
+        &:hover
+        {
+          background-color: #f9faff;
+        }
+      }
+   }
+}
+
+.menu-fixed-top
+{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+}

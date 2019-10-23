@@ -1,15 +1,10 @@
 mixin header(modifier)
   .header&attributes(attributes)
+    .header
     .container-fluid
-      .row.no-gutters
+      .row
         .col-12
           .header__content.mx-auto
-            +logo
-            nav.header__menu.ml-30
-              a.header__link(href="index.html" name='main') Главная
-              a.header__link(href="documents.html" name='documents') Документы
-              a.header__link(href="galery.html" name='galery') Галерея
-              a.header__link(href="contact.html" name='contact') Контакты
-            a.btn(href="apartament.html") Квартиры
-            a.btn_menu(name='menu')
-            a.btn_home(href="apartament.html" name='homes')
+            .header__content__logo.mt-30
+            p.header__content__title-up.mt-15 ЦЕНТР КОМПЕТЕНЦИЙ
+            p.header__content__title-bottom.mt-5 по вопросам городской среды Липецкой области

@@ -1,0 +1,15 @@
+mixin main-menu(modifier)
+  .main-menu&attributes(attributes)
+    .container-fluid
+      .row.no-gutters
+        .col-12
+          .main-menu__content.mx-auto
+            nav.main-menu__menu.ml-30
+              a.main-menu__link(href="index.html" name='main') О центре
+              a.main-menu__link(href="documents.html" name='documents') Новости
+              a.main-menu__link(href="galery.html" name='documents') Документы
+              a.main-menu__link(href="contact.html" name='contact') Контакты
+              a.main-menu__link(href="index.html" name='other') Прочее
+            +socials
+            a.btn_menu(name='menu')
+            a.btn_home(href="apartament.html" name='homes')

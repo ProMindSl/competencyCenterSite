@@ -1,14 +1,21 @@
 /* header */
 /* global vars */
-/*const PAGE_INDEX = 'http://localhost:3000/index.html';
+const PAGE_INDEX = 'http://localhost:3000/index.html';
 const PAGE_DOCUMENTS = 'http://localhost:3000/documents.html';
 const PAGE_GALERY = 'http://localhost:3000/galery.html';
 const PAGE_CONTACT = 'http://localhost:3000/contact.html';
 
 var currPage = PAGE_INDEX;
 
-setCurrPage(getNameByURL(window.location.href));
+//setCurrPage(getNameByURL(window.location.href));
 //windowSize();
+
+$(window).ready(function()
+{
+	setCurrPage(getNameByURL(window.location.href));
+	toggleHeader();
+
+});
 
 function setCurrPage(name)
 {
@@ -30,7 +37,7 @@ function setCurrPage(name)
 			currPage = PAGE_CONTACT;
 			break;
 	}
-	// Меняем цвет кнопки текущей страницы в хэдере
+	/* Меняем цвет кнопки текущей страницы в хэдере*/
 	$('.header__link[name='+name+']').css({'color':'#bb1620'});
 }
 
@@ -73,10 +80,10 @@ $('.btn_menu[name="menu"]').on('click', function() {
 });
 
 
-// Включаем display для меню при морфе в десктопное меню 
+/* Включаем display для меню при морфе в десктопное меню */
 function windowResizeHandler_fromHeader()
 {
-	//console.log($(window).width());
+	/*console.log($(window).width());*/
 	let _menu = $('nav.header__menu');
 	if ($(window).width() > '650')
 	{
@@ -87,4 +94,19 @@ function windowResizeHandler_fromHeader()
 		_menu.css({'display': 'none'});
 	} 
 }
-$(window).resize(windowResizeHandler_fromHeader); // при изменении размеров */
+$(window).resize(windowResizeHandler_fromHeader); // при изменении размеров
+
+
+
+function toggleHeader()
+{
+    var scroll_status = $(document).scrollTop();
+    if(scroll_status > 400)
+        $(".main-menu > .container-fluid").addClass("menu-fixed-top");
+    else
+        $(".main-menu > .container-fluid").removeClass("menu-fixed-top");
+}
+$(document).scroll(function()
+{
+    toggleHeader();
+})
