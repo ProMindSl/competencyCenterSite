@@ -1,15 +1,20 @@
 mixin front(modifier)
   .front&attributes(attributes)
-    .bg(id="bg_front")
-      .bg_6(id="bg_front_l6")
-        .bg_5(id="bg_front_l5")
-          .bg_4(id="bg_front_l4")
-            .bg_3(id="bg_front_l3")
-              .bg_2(id="bg_front_l2")
-                .bg_1(id="bg_front_l1")
-    .container(id="content_front")
-      .row
-        .col-lg-8.mx-auto
-          h1.text-center ООО «СТИРУС»
-          p.front__comment Текущий объект строительства: многоэтажное жилое здание по ул. Им. Семашко в Советском округе г. Липецка 
-          p.front__comment2 ООО "Стирус" входит в группу компаний ООО "Регионстрой"
+    .carousel.slide(id="carouselExampleIndicators" data-ride="carousel")
+      ol.carousel-indicators
+        li.active(data-target="#carouselExampleIndicators" data-slide-to="0")
+        li(data-target="#carouselExampleIndicators" data-slide-to="1")
+        li(data-target="#carouselExampleIndicators" data-slide-to="2")
+      .carousel-inner
+        .carousel-item.active
+          img.d-block.w-100(src="img/1_1595.jpg" alt="First slide")
+        .carousel-item
+          img.d-block.w-100(src="img/1_1644.jpg" alt="Second slide")
+        .carousel-item
+          img.d-block.w-100(src="img/1_1635.jpg" alt="Third slide")
+      a.carousel-control-prev(href="#carouselExampleIndicators" role="button" data-slide="prev")
+        span.carousel-control-prev-icon(aria-hidden="true")
+        span.sr-only Previous
+      a.carousel-control-next(href="#carouselExampleIndicators" role="button" data-slide="next")
+        span.carousel-control-next-icon(aria-hidden="true")
+        span.sr-only Next
