@@ -32,7 +32,7 @@
       opacity: 0;
       /*visibility: hidden;*/
       transition: opacity 0.7s, visibility 0s linear 0.3s;
-      
+      background-size: cover;
      
     }
   }
@@ -60,7 +60,7 @@
   
   &__title 
   {
-    font-size: 24px;
+    font-size: 18px;
     line-height: 34px;
     font-weight: 500;
     max-width: 305px;
@@ -68,7 +68,7 @@
   
   &__dscr
   {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 28px;
     font-weight: 400;
     margin-bottom: 0;

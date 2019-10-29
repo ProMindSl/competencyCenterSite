@@ -12,20 +12,20 @@
 
     &--phone 
     {
-    	background: $primary url("../img/pic_facebook.svg") no-repeat;
+    	background: #8ba2b2 url("../img/pic_facebook.svg") no-repeat;
     	background-position: center;
     }
     
     &--up 
     {
-    	background: $primary url("../img/pic_instagram.svg") no-repeat;
+    	background: #8ba2b2 url("../img/pic_instagram.svg") no-repeat;
     	background-position: center;
     }
 
     &:hover
     {
       cursor: pointer;
-    	background-color: $light_primary;
+    	background-color: #a3bfd2;
       @include transitionM(background-color, 0.3s);
     }
   }

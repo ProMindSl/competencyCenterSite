@@ -1,7 +1,6 @@
-mixin item(title, dscr, date, href, src, modifier)
+mixin item(title, dscr, date, href, src, imgNewsStyle, modifier)
   a.item(href=href)&attributes(attributes)
-    .item__picture(style="background-image: url(../img/item.jpg);")
-      img(src=src align=bottom)
+    .item__picture(style=imgNewsStyle)
     .item__content
       .item__content-top
         h3.item__title= title
