@@ -1,0 +1,6 @@
+mixin info-column(title, dscr, imgSrc, href)
+  .info-column(href=href)&attributes(attributes)
+    .info-column__picture(style='background-image: url("'+imgSrc+'"); background-repeat: no-repeat;')
+    .info-column__content
+      h3.info-column__content__title= title
+      p.info-column__content__dscr= dscr

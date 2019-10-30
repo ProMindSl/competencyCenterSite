@@ -3,6 +3,11 @@ block content
   +header
   +main-menu
   +front
+  .container
+    .row
+      .col-12
+        a(href="#")
+          h2.mt-70.text-center Новости
   .container.mt-60
     .row.d-flex
       .col-lg-4.col-sm-6.d-flex.justify-content-center.mb-30
@@ -25,15 +30,17 @@ block content
   .container
     .row
       .col-12
-        a(href="#")
-          h2.mt-70.text-center Задачи
-    .row.mt-10
-      .col-lg-4.col-sm-6
-        +picture("img/IMG_20180927_113750.jpg", "background-image: url(../img/IMG_MIN_20180927_113750.jpg);")
-      .col-lg-4.col-sm-6.d-none.d-sm-block
-        +picture("img/IMG_20180917_103424.jpg", "background-image: url(../img/IMG_MIN_20180917_103424.jpg);")
-      .col-lg-4.col-sm-6.d-none.d-lg-block
-        +picture("img/IMG_20180927_113737.jpg", "background-image: url(../img/IMG_MIN_20180927_113737.jpg);")
+        h2.mt-70.text-center Задачи
+        h6.text-center.mb-40(style='font-weight: 300;') Чем занимается Центр компетенций
+    .row.d-flex.mt-20
+      .col-lg-3.col-sm-4.d-flex.justify-content-center.mb-20
+        +info-column('Экспертиза проектов благоустройства', 'Мы делаем оценку дизайн-проектов благоустройства дворовых и общественных территорий, даем рекомендации по развитию пространств и повышения качества среды с учетом природного, социального и экономического своеобразия наших городов', "../img/pic_zadachi_1.png", '#')
+      .col-lg-3.col-sm-4.d-flex.justify-content-center.mb-20
+        +info-column('Обучение и просвещение', 'Мы учим тех, кто хочет понимать и развивать свой город, мы стремимся через повышение компетенций профессионалов и просвещение горожан создать базу для системных изменений в области благоустройства и городского развития', "../img/pic_zadachi_2.png", '#')
+      .col-lg-3.col-sm-4.d-flex.justify-content-center.mb-20
+        +info-column('Внедрение стандартов благоустройства', 'Мы проводим аудит городской среды, разрабатываем и апробируем современные стандарты благоустройства, вовлекаем в эту работу профессиональных экспертов и активных горожан', "../img/pic_zadachi_3.png", '#')
+      .col-lg-3.col-sm-4.d-flex.justify-content-center.mb-20
+        +info-column('Развитие экспертного сообщества', 'Мы - сообщество взаимного роста экспертов-практиков: урбанистов, архитекторов, дизайнеров, экологов, социологов, культурологов, чиновников, городских предпринимателей и активистов, объединенных идей развития культурного и физического ландшафта донских городов', "../img/pic_zadachi_4.png", '#')
   .container-fluid.mb-100
     .row
       .col-12
