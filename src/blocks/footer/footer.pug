@@ -8,9 +8,8 @@ mixin footer(modifier)
             button(type="button" class="close" data-dismiss="modal" aria-label="Close")
               span(aria-hidden="true") &times;
           .modal-body
-            p Сайт разработан ГОАОУ «Центр поддержки одаренных детей «Стратегия» по заказу ООО"Стирус".
+            p Сайт разработан ГОАОУ «Центр поддержки одаренных детей «Стратегия» по заказу Центр компетенций по вопросам городской среды Липецкой области.
             a(href='http://www.strategy48.ru/') www.strategy48.ru
-            p Frontend/Backend-разработка: В.Ю. Авдеев 
           .modal-footer
             button.btn.btn-secondary.mx-auto(data-dismiss="modal") Закрыть
     .modal.fade(id="modal_SiteMap" tabindex="-1" role="dialog" aria-labelledby="modalLabel_SiteMap" aria-hidden="true")
@@ -31,19 +30,20 @@ mixin footer(modifier)
       .modal-dialog.modal-lg(role="document")
         .modal-content
           .modal-header
-            h5.modal-title(id="modalLabel_AboutCo") О Компании
+            h5.modal-title(id="modalLabel_AboutCo") О Центре
             button(type="button" class="close" data-dismiss="modal" aria-label="Close")
               span(aria-hidden="true") &times;
           .modal-body
-            h6  Цели и виды деятельности ООО "Стирус"
-            p Целью деятельности Общества является достижение максимальной экономической эффективности, наиболее полное и качественное удовлетворение потребностей физических и юридических лиц в производимой Обществом продукции, выполняемых работах и услугах. 
-            h6 Основные виды деятельности Общества
-            p купля-продажа недвижимости; строительство жилых и нежилых зданий.
-            h6 Директор 
-            p Меделян Вера Васильевна +7(4742) 35-77-08
-            div
-              span Полная контактная информация находится в разделе
-                a.ml-10(href="contact.html") Контакты
+            h6 Email:
+            p center-competence.lipetsk@mail.ru 
+            h6 Юридический адрес:
+            p Российская Федерация, 398017, г. Липецк, ул. Осипенко, д. 12
+            h6 Режим работы:  
+            p вторник-четверг: 8:00 - 17:00; пятница: 8:00 - 16:00; перерыв: 12.00 - 12:48 
+            h6 Руководитель:
+            p Гладких Ольга Николаевна
+            h6 Контактные телефоны:
+            p +7(4742) 43-01-82
     .container-fluid
       .row
         .col-12
@@ -51,6 +51,6 @@ mixin footer(modifier)
             nav.footer__sitemap
               a.footer__link(href="#" data-target="#modal_SiteMap" data-toggle="modal") Карта сайта
               a.footer__link(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
-              a.footer__link(href="#" data-target="#modal_AboutCo" data-toggle="modal") О Компании
+              a.footer__link(href="#" data-target="#modal_AboutCo" data-toggle="modal") Контактная информация
             +socials(class="mt-20 mr-5")
           span.footer__copyright.mx-auto  © 2019 Центр компетенций по вопросам городской среды Липецкой области
