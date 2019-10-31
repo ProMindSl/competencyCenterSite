@@ -19,6 +19,7 @@
     &:hover
     {
         background-color: $light_primary;
+        color: white;
         @include transitionM(background-color, 0.3s);
     }
 }
