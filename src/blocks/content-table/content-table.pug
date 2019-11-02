@@ -15,9 +15,9 @@ mixin content-table(col_names, rows, hrefs, modifier)
               tr(onclick=hrefs[i])
                 th(scope='row')=(i+1)
                 - for(let j=1; j<rows[i].length; j++) {
-                td=rows[i][j] /* заполнение строк таблицы из аргумента-массива*/
-                  - if (rows[i][j] == 'PDF') { /* добавляем картинку pdf в соответствующую ячейку */
-                  img(src="img/pdf.svg")
+                td=((j != 2) ? rows[i][j] : '') /* заполнение строк таблицы из аргумента-массива*/
+                  - if (j == 2) { /* добавляем картинку pdf в соответствующую ячейку */
+                  img(src=rows[i][j])
                   - }
                 - }
               - }

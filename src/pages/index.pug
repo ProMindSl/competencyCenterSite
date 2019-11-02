@@ -86,7 +86,18 @@ block content
       .col-12.mx-auto
         +circle-item('"Липецкгражданпроект"', 'АО "Проектный институт"', "../img/img_partner_7.png", "#")
 
-  
+  .container-fluid.mb-0(style='background-color: #fafbfe;')
+    .row
+      .col-12
+        .text-center
+          img(src="img/half_circle_white.svg" style="transform: rotate(180deg) translateX(50%); display: inline-block; position: absolute; top: 0; left: 50%; z-index: 0;")
+          a(href="#" style='color:#000; z-index: 2: background-color:red; position: absolute;')
+          img(src="img/arrow_down.svg" style='position: absolute; top: 0; left: 50%;')
+  .container-fluid.mb-0(style='background-color: #fafbfe;')
+    .row
+      .col-12
+        h2.mt-40.text-center Полезная информация
+  +content-table(['#', 'Наименование ресурса', ''], [['1', 'Приоритетный проект «Формирование комфортной городской среды»', "img/table_src_img_1.png"], ['2', 'Минстрой России', 'img/table_src_img_1.png'], ['3', 'Медиацентр КБ Стрелка', 'img/table_src_img_2.png'], ['4', 'Конкурс «Малые города и исторические поселения» ', 'img/table_src_img_3.png'], ['5', 'Индекс качества городской среды', 'img/table_src_img_2.png'], ['6', 'Архитекторы РФ', 'img/table_src_img_4.png']], ["location.href='http://www.minstroyrf.ru/trades/gorodskaya-sreda/strategicheskoe-napravlenie-razvitiya-zhkkh-i-gorodskaya-sreda/'", "location.href='http://www.minstroyrf.ru/'", "location.href='https://media.strelka-kb.com/'", "location.href='https://konkurs.gorodsreda.ru/'", "location.href='https://xn----dtbcccdtsypabxk.xn--p1ai/'", "location.href='https://xn--80akijuiemcz7e.xn--p1ai/'"], 'mb-80')
 
   //.container-fluid.mb-100
     .row
