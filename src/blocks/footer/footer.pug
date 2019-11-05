@@ -44,6 +44,22 @@ mixin footer(modifier)
             p Гладких Ольга Николаевна
             h6 Контактные телефоны:
             p +7(4742) 43-01-82
+    .modal.fade(id="modal_ContactUs" tabindex="-1" role="dialog" aria-labelledby="modalLabel_ContactUs" aria-hidden="true")
+      .modal-dialog.modal-lg(role="document")
+        .modal-content
+          .modal-header
+            h5.modal-title(id="modalLabel_ContactUs" style="color: #0e527f; text-align: center;") Напишите нам
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body
+            .col-xl-4.col-sm-6.offset-xl-4.offset-sm-3
+              form(action="#", method="POST").d-flex.flex-column.align-items-center.mt-10
+                input.input(type="text", placeholder="Имя")
+                input.input(type="email", placeholder="Email").mt-20
+                input.input(type="text", placeholder="Ссылка на проект").mt-20
+                textarea.input.input--textarea(placeholder="Сообщение").mt-20
+                .d-flex.justify-content-center.mt-30
+                  input.btn.mb-15(type="submit", value="Отправить")
     .container-fluid
       .row
         .col-12
