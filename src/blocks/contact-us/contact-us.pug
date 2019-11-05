@@ -4,7 +4,6 @@ mixin contact-us()
       .row
         .col-12
           .contact-us__picture-bg
-          .contact-us__picture-bg2
     .container
       .row
         .col-md-4.offset-md-1.col-sm-10.offset-sm-1
@@ -12,5 +11,5 @@ mixin contact-us()
             h3.contact-us__content__title= 'Центр компетенций предлагает тебе стать частью комманды'
             p.contact-us__content__dscr= 'Присоединись к комманде Центра, реализуй свои мечты в реальность. Для этого нужно разработать и приложить к письму по совершенствованию городских территорий Липецкой области.'
             p.contact-us__content__dscr= '*Просим обратить внимание, что кроме проекта важный пункт для принятия решения - это Ваше описание: почему именно Вы нам подходите в комманду.'
-            input.btn(type="submit", method="post", value="Хочу в комманду", action="mailto:center-competence.lipetsk@mail.ru")
+            input.btn(type="submit", value="Отправить", href="#", data-target="#modal_ContactUs", data-toggle="modal")
           .contact-us__bg-bottom
