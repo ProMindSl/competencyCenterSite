@@ -4,6 +4,7 @@
 	
     margin-bottom: 100px;
 
+
 	&__picture-bg
 	{
 		position: absolute;
@@ -29,16 +30,23 @@
     	background-image: url("../img/contact_us.svg");
     	
     	
+    	@include media-breakpoint-down(sm) 
+	    {
+	      	display: none;
+	    }
+    	
 	}
 
 	&__content
 	{
 		background: rgba(255, 255, 255, 0.9);
 		padding: 20px;
-
+		box-shadow: 0 2px 8px rgba(163, 191, 209, 0.5);
+		border-radius: 3%;
+		
 		&__title
 		{
-			color: #76769e;
+			color: #0e527f;
 		    font-size: 20px;
 		    font-weight: 500;
 		    margin-bottom: 20px;
@@ -51,6 +59,29 @@
 		    line-height: 18px;
 		    font-weight: 400;
 		}
+
+		.btn
+		{
+			margin: 0 auto;
+		}
 	}
+
+		&__bg-bottom
+	    {
+	    	float: right;
+	    	padding: 0px;
+	    	z-index: 0;
+	    	background-image: url("../img/bg_bottom_part.png");
+	    	background-size: cover;
+	    	opacity: 0.8;
+	    	margin-right: 10px;
+	    	width: 25px;
+	    	height: 24px;
+
+	    	@include media-breakpoint-down(sm) 
+		    {
+		      	display: none;
+		    }
+	    }
 }
 
