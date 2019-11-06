@@ -12,20 +12,24 @@ mixin footer(modifier)
             a(href='http://www.strategy48.ru/') www.strategy48.ru
           .modal-footer
             button.btn.btn-secondary.mx-auto(data-dismiss="modal") Закрыть
+
     .modal.fade(id="modal_SiteMap" tabindex="-1" role="dialog" aria-labelledby="modalLabel_SiteMap" aria-hidden="true")
-      .modal-dialog(role="document")
+      .modal-dialog.modal-lg(role="document")
         .modal-content
           .modal-header
-            h5.modal-title(id="modalLabel_SiteMap") Карта сайта
+            h5.modal-title(id="modalLabel_SiteMap") Политика конфиденциальности
             button(type="button" class="close" data-dismiss="modal" aria-label="Close")
               span(aria-hidden="true") &times;
           .modal-body
-            .list-group
-              a.list-group-item.list-group-item-action(href="index.html") Главная
-              a.list-group-item.list-group-item-action(href="documents.html") Документы
-              a.list-group-item.list-group-item-action(href="galery.html") Галерея
-              a.list-group-item.list-group-item-action(href="contact.html") Контакты
-              a.list-group-item.list-group-item-action(href="apartament.html") Квартиры
+            p Настоящая Политика конфиденциальности является составной частью Пользовательского соглашения Сайта и действует в отношении всей информации, в том числе персональных данных Пользователя, получаемых Администрацией Сайта в процессе работы Пользователя с Сайтом, исполнения Пользовательского соглашения и соглашений между Администрацией сайта и Пользователем. Использование Сайта означает безоговорочное согласие Пользователя с настоящей Политикой конфиденциальности и указанными в ней условиями обработки его персональных данных; в случае несогласия с этими условиями Пользователь должен воздержаться от использования Сайта.
+            p Перед использованием Сайта Пользователю необходимо внимательно изучить настоящую Политику конфиденциальности.
+            h6 Персональные данные:
+            p Предоставление в любой форме (регистрация на Сайте, осуществление заказов, подписка на рекламные рассылки и тд.) своих персональных данных Администрации сайта, Пользователь выражает согласие на обработку персональных данных Администрацией сайта в соответствии с Федеральным законом “О персональных данных” от 27.07.2006 №152-ФЗ. 
+            p Обработка персональных данных осуществляется в целях исполнения Пользовательского соглашения и иных соглашений между Администрацией сайта и Пользователем.   
+            p Обработка персональных данных производится исключительно на территории Российской Федерации, с соблюдением действующего законодательства Российской Федерации. 
+            p Согласие Пользователя на обработку его персональных данных дается Администрации сайта на срок исполнения обязательств между Пользователем и Администрацией сайта в рамках Пользовательского соглашения или других соглашений между Пользователем и Администрацией сайта.
+            p В случае отзыва согласия на обработку персональных данных Пользователя, Пользователь уведомляет об этом Администрацию Сайта письменно или по электронной почте. После получения данного уведомления Администрация Сайта прекращает обработку персональных данных Пользователя и удаляет. 
+            p Сайт не имеет статуса оператора персональных данных. Персональные данные Пользователя не передаются каким-либо третьим лицам, за исключением случаев, прямо предусмотренных настоящей Политикой конфиденциальности.
     .modal.fade(id="modal_AboutCo" tabindex="-1" role="dialog" aria-labelledby="modalLabel_AboutCo" aria-hidden="true")
       .modal-dialog.modal-lg(role="document")
         .modal-content
@@ -65,7 +69,7 @@ mixin footer(modifier)
         .col-12
           .footer__top.mx-auto
             nav.footer__sitemap
-              a.footer__link(href="#" data-target="#modal_SiteMap" data-toggle="modal") Карта сайта
+              a.footer__link(href="#" data-target="#modal_SiteMap" data-toggle="modal") Политика конфиденциальности
               a.footer__link(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
               a.footer__link(href="#" data-target="#modal_AboutCo" data-toggle="modal") Контактная информация
             +btn-circle("background-image: url(/img/pic_up.svg);", "btn_toTop").mt-20.mr-5(id="btn_toTop")
