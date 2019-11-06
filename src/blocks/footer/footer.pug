@@ -68,5 +68,5 @@ mixin footer(modifier)
               a.footer__link(href="#" data-target="#modal_SiteMap" data-toggle="modal") Карта сайта
               a.footer__link(href="#" data-target="#modal_AboutSite" data-toggle="modal") Сайт-инфо
               a.footer__link(href="#" data-target="#modal_AboutCo" data-toggle="modal") Контактная информация
-            +socials(class="mt-20 mr-5")
+            +btn-circle("background-image: url(/img/pic_up.svg);", "btn_toTop").mt-20.mr-5(id="btn_toTop")
           span.footer__copyright.mx-auto  © 2019 Центр компетенций по вопросам городской среды Липецкой области
