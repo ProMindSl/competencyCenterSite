@@ -4,8 +4,13 @@ mixin main-menu(modifier)
       .row.no-gutters
         .col-12
           .main-menu__content.mx-auto
-            nav.main-menu__menu.ml-30
-              a.main-menu__link(href="index.html" name='main') О центре
+            nav.main-menu__menu.ml-30.dropdown
+              a.main-menu__link(href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" name='main').dropdown-toggle О Центре
+              .dropdown-menu(aria-labelledby="dropdownMenuLink" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(30px, 60px, 0px);" x-placement="bottom-start")
+                a.dropdown-item(href="#") Эксперты Центра
+                a.dropdown-item(href="#") Стать частью команды
+                a.dropdown-item(href="#") Наши партнеры
+                a.dropdown-item(href="#") Полезное
               a.main-menu__link(href="documents.html" name='documents') Новости
               a.main-menu__link(href="galery.html" name='documents') Документы
               a.main-menu__link(href="#" data-target="#modal_AboutCo" data-toggle="modal" name='contact') Контакты
