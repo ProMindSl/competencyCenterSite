@@ -104,7 +104,7 @@
       opacity: 1;
 
       /* Перестройка меню сайта при маленьком разрешении */
-      @media all and (max-width: 650px)
+      @media all and (max-width: 760px)
       {
         display: none;
         position: absolute;
@@ -140,7 +140,7 @@
         color: $dark_primary;
       }
 
-      @media all and (max-width: 650px)
+      @media all and (max-width: 760px)
       {
         width: 130px;
         height: 55px;

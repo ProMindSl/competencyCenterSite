@@ -65,8 +65,9 @@ function getNameByURL(url)
 }
 
 // обработчик клика на кнопку меню
-$('.btn_menu[name="menu"]').on('click', function() {
-	let _menu = $('nav.header__menu');
+$('.btn_menu[name="menu"]').on('click', function() 
+{
+	let _menu = $('nav.main-menu__menu');
 
 	if(_menu.css('display') == 'none')	
 	{
@@ -81,20 +82,20 @@ $('.btn_menu[name="menu"]').on('click', function() {
 
 
 /* Включаем display для меню при морфе в десктопное меню */
-function windowResizeHandler_fromHeader()
+function windowResizeHandler_fromMM()
 {
 	/*console.log($(window).width());*/
-	let _menu = $('nav.header__menu');
-	if ($(window).width() > '650')
+	let _menu = $('nav.main-menu__menu');
+	if ($(window).width() > '760')
 	{
 		if(_menu.css('display') == 'none')	_menu.css({'display': 'inline-flex'});
 	}
-	else if ($(window).width() <= '650')
+	else if ($(window).width() <= '760')
 	{
 		_menu.css({'display': 'none'});
 	} 
 }
-$(window).resize(windowResizeHandler_fromHeader); // при изменении размеров
+$(window).resize(windowResizeHandler_fromMM); // при изменении размеров
 
 
 
