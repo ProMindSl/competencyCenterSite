@@ -1,10 +1,16 @@
 mixin header(modifier)
   .header&attributes(attributes)
-    .header
+    //.container
+      .row
+        .col-lg-3.offset-lg-9.col-md-4.offset-md-4.col-sm-10.offset-sm-1
+          p.header__top-content Версия для слабовидящих
     .container-fluid
+      .row
+        .col-lg-3.offset-lg-9.col-md-4.offset-md-4.col-sm-10.offset-sm-1
+          p.header__top-content Версия для слабовидящих
       .row
         .col-12
           .header__content.mx-auto
-            .header__content__logo.mt-30
-            p.header__content__title-up.mt-15 ЦЕНТР КОМПЕТЕНЦИЙ
+            .header__content__logo
+            //p.header__content__title-up.mt-15 ЦЕНТР КОМПЕТЕНЦИЙ
             p.header__content__title-bottom.mt-5 по вопросам городской среды Липецкой области

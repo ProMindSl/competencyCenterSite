@@ -1,68 +1,17 @@
 /* header */
-/* global vars */
-const PAGE_INDEX = 'http://localhost:3000/index.html';
-const PAGE_DOCUMENTS = 'http://localhost:3000/documents.html';
-const PAGE_GALERY = 'http://localhost:3000/galery.html';
-const PAGE_CONTACT = 'http://localhost:3000/contact.html';
 
-var currPage = PAGE_INDEX;
 
 //setCurrPage(getNameByURL(window.location.href));
 //windowSize();
 
 $(window).ready(function()
 {
-	setCurrPage(getNameByURL(window.location.href));
+	//setCurrPage(getNameByURL(window.location.href));
 	toggleHeader();
 
 });
 
-function setCurrPage(name)
-{
-	switch(name)
-	{
-		case 'main':
-			currPage = PAGE_INDEX;
-			break;
 
-		case 'documents':
-			currPage = PAGE_DOCUMENTS;
-			break;
-
-		case 'galery':
-			currPage = PAGE_GALERY;
-			break;
-
-		case 'contact':
-			currPage = PAGE_CONTACT;
-			break;
-	}
-	/* Меняем цвет кнопки текущей страницы в хэдере*/
-	$('.header__link[name='+name+']').css({'color':'#bb1620'});
-}
-
-function getNameByURL(url)
-{
-	switch (url)
-	{
-		case PAGE_INDEX || PAGE_INDEX+'#':
-			return 'main';
-			break;
-
-		case PAGE_DOCUMENTS:
-			return 'documents';
-			break;
-
-		case PAGE_GALERY:
-			return 'galery';
-			break;
-
-		case PAGE_CONTACT:
-			return 'contact';
-			break;
-	}
-
-}
 
 // обработчик клика на кнопку меню
 $('.btn_menu[name="menu"]').on('click', function() 
@@ -89,10 +38,12 @@ function windowResizeHandler_fromMM()
 	if ($(window).width() > '760')
 	{
 		if(_menu.css('display') == 'none')	_menu.css({'display': 'inline-flex'});
+		//$(".main-menu__content.mx-auto > a.logo").css({'display': 'block'});
 	}
 	else if ($(window).width() <= '760')
 	{
 		_menu.css({'display': 'none'});
+		//$(".main-menu__content.mx-auto > a.logo").css({'display': 'none'});
 	} 
 }
 $(window).resize(windowResizeHandler_fromMM); // при изменении размеров
@@ -102,10 +53,18 @@ $(window).resize(windowResizeHandler_fromMM); // при изменении ра�
 function toggleHeader()
 {
     var scroll_status = $(document).scrollTop();
-    if(scroll_status > 400)
+    if(scroll_status > 308)
+    {
         $(".main-menu > .container-fluid").addClass("menu-fixed-top");
+        $(".front").addClass("mt-70");
+        //if ($(window).width() > '760') $(".main-menu__content.mx-auto > a.logo").css({'display': 'block'});
+    }
     else
+    {
         $(".main-menu > .container-fluid").removeClass("menu-fixed-top");
+        $(".front").removeClass("mt-70");
+        //$(".main-menu__content.mx-auto > a.logo").css({'display': 'none'});
+    }
 }
 $(document).scroll(function()
 {
