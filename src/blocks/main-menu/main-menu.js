@@ -9,6 +9,31 @@ $(window).ready(function()
 	//setCurrPage(getNameByURL(window.location.href));
 	toggleHeader();
 
+	// handlers for menu btns
+	$('#btn_src_objective').click(function()
+	{
+		$("html, body").animate({ scrollTop: ($('#title_objectivity').offset().top - 100) }, 1200);
+	});
+	$('#btn_src_news').click(function()
+	{
+		$("html, body").animate({ scrollTop: ($('#title_news').offset().top - 100) }, 1200);
+	});
+	$('#btn_src_experts').click(function()
+	{
+		$("html, body").animate({ scrollTop: ($('#title_experts').offset().top - 100) }, 1200);
+	});
+	$('#btn_src_contactus').click(function()
+	{
+		$("html, body").animate({ scrollTop: ($('#title_contactus').offset().top - 100) }, 1200);
+	});
+	$('#btn_src_partners').click(function()
+	{
+		$("html, body").animate({ scrollTop: ($('#title_partners').offset().top - 100) }, 1200);
+	});
+	$('#btn_src_useful').click(function()
+	{
+		$("html, body").animate({ scrollTop: ($('#title_useful').offset().top - 100) }, 1200);
+	});
 });
 
 
