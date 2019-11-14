@@ -6,12 +6,27 @@
   /*
   height: 500px;
   */
+
+  @media all and (max-width:650px)
+  {
+    height: 300px;
+  }
   .carousel.slide
   {
+
     .carousel-inner
     {
         .carousel-item
         {
+          img
+          {
+            @media all and (max-width:650px)
+            {
+              width: 50%;
+              height: 300px;
+            }
+          }
+          
           .carousel-caption
           {
             background: rgba(0,0,0, 0.3);
