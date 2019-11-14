@@ -1,5 +1,5 @@
 mixin item(title, dscr, date, href, src, imgNewsStyle, modifier)
-  a.item(href=href)&attributes(attributes)
+  a.item(href=href, data-target="#modal_news_content", data-toggle="modal")&attributes(attributes)
     .item__picture(style=imgNewsStyle)
     .item__content
       .item__content-top
