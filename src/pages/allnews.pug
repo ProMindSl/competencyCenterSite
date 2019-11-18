@@ -1,0 +1,16 @@
+extends ../templates/template.pug
+block content
+  +header
+  .container
+    .row
+      .col-md-4.col-sm-8.mx-auto
+        nav(aria-label="breadcrumb")
+          ol.breadcrumb
+            li.breadcrumb-item
+              a(href="index.html") Главная
+            li.breadcrumb-item.active(aria-current="page") Новости
+  .container-fluid(style='background-color: #fafbfe;')
+    .row
+      .col-12
+        h2.mt-50.text-center Новости
+  +footer
