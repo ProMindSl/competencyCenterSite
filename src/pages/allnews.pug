@@ -13,4 +13,45 @@ block content
     .row
       .col-12
         h2.mt-50.text-center Новости
+  .container.pt-30(style='background-color: #fafbfe;')
+    .row.d-flex
+      .col-lg-10.offset-lg-1.col-md-12.offset-md-0.col-sm-10.offset-sm-1.d-flex.justify-content-center.mb-30
+        +item-long('Елена Бадулина посетила с. Донское', 'В выездном совещании также приняли участие глава Задонского района Алексей Щедров, глава сельского поселения Донской сельсовет ...', '01.09.2019', '#', 'img/receipt.svg', "background-image: url(../img/1_1644.jpg); background-size: cover;")
+      .col-lg-10.offset-lg-1.col-md-12.offset-md-0.col-sm-10.offset-sm-1.d-flex.justify-content-center.mb-30
+        +item-long('Рабочая встреча по благоустройству территорий', 'В региональном управлении жилищно-коммунального хозяйства состоялась рабочая встреча руководителя коммунального отдела Ирины Дьяковой ...', '29.08.2019', '#', 'img/bookmark-alt.svg', "background-image: url(../img/1_1635.jpg); background-size: cover;")
+      .col-lg-10.offset-lg-1.col-md-12.offset-md-0.col-sm-10.offset-sm-1.d-flex.justify-content-center.mb-30
+        +item-long('Заседание по федеральному проекту «Формирование комфортной городской среды»', 'Елена Бадулина выступила докладчиком по теме благоустройства Липецкой области. В ходе ...', '24.08.2019', '#', 'img/home.svg', "background-image: url(../img/1_1639.jpg); background-size: cover;")
+      .col-lg-10.offset-lg-1.col-md-12.offset-md-0.col-sm-10.offset-sm-1.d-flex.justify-content-center.mb-30
+        +item-long('Выездное совещание по благоустройству в г. Елец', 'В г. Елец состоялось выездное совещание с главой города Сергеем Пановым, главным архитектором области Сергеем Анохиным, руководителем...', '01.08.2019', '#', 'img/ruler-pencil.svg', "background-image: url(../img/1_1645.png); background-size: cover;")
+      .col-lg-10.offset-lg-1.col-md-12.offset-md-0.col-sm-10.offset-sm-1.d-flex.justify-content-center.mb-30
+        +item-long('Создан Центр компетенций по благоустройству', 'С целью реализации регионального проекта «Формирование комфортной городской среды» на территории Липецкой области на базе ГОАОУ ...', '01.07.2019', '#', 'img/write.svg', "background-image: url(../img/1_1595.jpg); background-size: cover;")
+      .col-lg-10.offset-lg-1.col-md-12.offset-md-0.col-sm-10.offset-sm-1.d-flex.justify-content-center.mb-30
+        +item-long('Заголовок новости', 'Краткое содержание новости, со ссылкой на детализацию при клике', '01.08.2019', '#', 'img/key.svg', "background-image: url(../img/item.jpg); background-size: cover;")
   +footer
+  .modal.fade(id="modal_news_content" tabindex="-1" role="dialog" aria-labelledby="modalLabel_news_content" aria-hidden="true")
+      .modal-dialog.modal-lg(role="document")
+        .modal-content
+          .modal-header
+            h5.modal-title.p-15(id="modalLabel_news_content") В управлении ЖКХ Липецкой области состоялась рабочая встреча по благоустройству дворовых и общественных территорий
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") &times;
+          .modal-body.p-15
+            .carousel.slide.mb-30.p-15(id="carouselExampleIndicators1" data-ride="carousel")
+              ol.carousel-indicators
+                li.active(data-target="#carouselExampleIndicators1" data-slide-to="0")
+                li(data-target="#carouselExampleIndicators1" data-slide-to="1")
+                li(data-target="#carouselExampleIndicators1" data-slide-to="2")
+              .carousel-inner
+                .carousel-item.active
+                  img.d-block.w-100(src="img/1_1595.jpg" alt="First slide")
+                .carousel-item
+                  img.d-block.w-100(src="img/1_1635.jpg" alt="Second slide")
+              a.carousel-control-prev(href="#carouselExampleIndicators1" role="button" data-slide="prev")
+                span.carousel-control-prev-icon(aria-hidden="true")
+                span.sr-only Previous
+              a.carousel-control-next(href="#carouselExampleIndicators1" role="button" data-slide="next")
+                span.carousel-control-next-icon(aria-hidden="true")
+                span.sr-only Next
+            p.pl-15.pr-15 В региональном управлении жилищно-коммунального хозяйства состоялась рабочая встреча руководителя коммунального отдела Ирины Дьяковой с Центром компетенций и представителями детского технопарка «Кванториум».  
+            p.pl-15.pr-15 В ближайшее время все объекты, которые подлежат благоустройству, будут визуализированы и загружены в систему ГИС ЖКХ.    
+            p.pl-15.pr-15 Основная задача – показать жителям области, органам местного самоуправления, администрации Липецкой области и всем желающим каким образом будут выглядеть объекты благоустройства (дворовые территории и общественные пространства) до и после.

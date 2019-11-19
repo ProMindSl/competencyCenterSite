@@ -1,0 +1,8 @@
+mixin item-long(title, dscr, date, href, src, imgNewsStyle, modifier)
+  a.item-long(href=href, data-target="#modal_news_content", data-toggle="modal")&attributes(attributes)
+    .item-long__picture.mx-auto(style=imgNewsStyle)
+    .item-long__content
+      .item-long__content-top
+        h3.item-long__title= title
+        p.item-long__dscr= dscr
+      .item-long__date= date
